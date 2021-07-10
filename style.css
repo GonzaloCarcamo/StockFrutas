@@ -1,0 +1,58 @@
+*{
+   margin: 0px;
+   padding: 0px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#app{
+   background-color: rgb(238, 231, 255);
+   margin: 0px auto;
+   margin-top: 50px;
+   padding: 10px;
+   width: 290px;
+   border-radius: 15px;
+}
+
+#app ul{
+   list-style: none;
+   margin-top: 20px;
+}
+
+li{
+   width: 100%;
+}
+
+input[type="text"]{
+   width: 218px;
+   margin-right: 10px;
+}
+
+input[type=number]{
+   width: 30px;
+   text-align: center;
+}
+
+button{
+   width: 45px;
+}
+
+p{
+   display: inline-block;
+   width: 80px;
+   margin-left: 5px;
+   text-transform: capitalize;
+   font-weight: 600;
+}
+
+h5{
+   display: inline-block;
+   width: 60px;
+}
+
+h1{
+   margin-bottom: 20px;
+}
+
+h1,h4{
+   text-align: center;
+}

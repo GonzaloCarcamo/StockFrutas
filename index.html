@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Vue-CDN</title>
+</head>
+<body>
+   <div id="app">
+      <h1>{{titulo}}</h1>
+
+      <!-- v-model permite linkear el input con la propiedad -->
+      <!-- con keyup asigno la función a una tecla del keyboard -->
+      <input type="text" 
+         v-model="nuevaFruta"
+         @keyup.enter="agregarFruta"
+      >
+
+      <!-- Al evento se puede llamar así o v-on:click="" -->
+      <button @click="agregarFruta">Enviar</button>
+      
+
+      <ul>
+         <li v-for="fruta of frutas">
+            <input type="number" v-model.number="fruta.cantidad">
+            <p>{{fruta.nombre}}</p>
+            <button @click="fruta.cantidad++">+</button>
+            <button @click="fruta.cantidad--">-</button>
+            <h5 v-if="fruta.cantidad === 0"> Sin Stock</h5>
+         </li>
+         <br>
+      </ul>
+
+      <h4>Total: {{sumarFrutas}}</h4>
+   </div>
+
+
+   <!-- development version, includes helpful console warnings -->
+   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+   <script src="01.js"></script>
+</body>
+</html>
